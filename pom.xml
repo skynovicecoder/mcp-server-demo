@@ -53,10 +53,10 @@
 		</dependency>
 
 		<!-- Spring Web (needed for H2 Console UI) -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<!-- MapStruct -->
 		<dependency>
