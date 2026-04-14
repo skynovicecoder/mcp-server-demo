@@ -21,6 +21,28 @@ docker run -p 8080:8080 spring-mcp-server:latest
 1. https://ollama.com/ //Download at local
 2. ollama run llama3.2 //to download one model
 
+1. docker run -d \
+   -p 11434:11434 \
+   --name ollama \
+   ollama/ollama
+2. curl http://localhost:11434/api/tags
+3. docker exec -it ollama ollama run llama3
+or
+   docker exec -it ollama ollama pull llama3
+   
+   curl http://localhost:11434/api/generate -d '{
+   "model": "llama3:latest",
+   "prompt": "Explain microservices in simple terms"
+   }'
+or
+   docker exec -it ollama ollama pull llama3:8b
+or
+   docker exec -it ollama ollama pull phi3   
+-- Phi-3 runs much faster
+
+or
+   docker exec -it ollama ollama pull tinyllama
+
 ### 3. SeekChat Application As Free Opensource MCP Client
 # Clone the repository
 git clone https://github.com/seekrays/seekchat.git

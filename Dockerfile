@@ -1,6 +1,7 @@
 FROM alpine/java:21-jdk AS builder
 WORKDIR /project
-COPY build/libs/app.jar app.jar
+#COPY build/libs/app.jar app.jar
+COPY target/*.jar app.jar
 RUN java -Djarmode=tools -jar app.jar extract --layers --launcher
 EXPOSE 8080
 
